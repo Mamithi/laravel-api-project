@@ -22,3 +22,12 @@ Route::get('articles/{article}', 'ArticleController@show');
 Route::post('articles', 'ArticleController@store');
 Route::put('articles/{article}', 'ArticleController@update');
 Route::delete('articles/{article}', 'ArticleController@delete');
+
+# Registering api method
+Route::post('register', 'Auth\RegisterController@register');
+
+# Login via api
+Route::post('login', 'Auth\LoginController@login');
+
+# Loggin out through the api endoint
+Route::post('logout', 'Auth\LoginController@logout');
